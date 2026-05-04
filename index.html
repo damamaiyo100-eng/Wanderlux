@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WanderLux Travel Agency – Personalised holiday planning, guided tours and custom travel packages for domestic and international destinations." />
+  <meta name="keywords" content="travel agency, holiday packages, guided tours, flights, hotels, honeymoon" />
+  <title>WanderLux Travel Agency – Explore the World in Luxury</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="WanderLux Home">
+      <span class="logo-icon">✈</span>
+      Wander<span>Lux</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="calculator.html" aria-label="Trip cost calculator">Calculator</a></li>
+      <li><a href="appointment.html" aria-label="Book an appointment">Book</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO SLIDER -->
+<section class="hero" aria-label="Featured destinations slideshow">
+  <div class="slide active slide-1"></div>
+  <div class="slide slide-2"></div>
+  <div class="slide slide-3"></div>
+
+  <div class="hero-content">
+    <h1 class="reveal">Your Dream Journey<br><span>Starts Here</span></h1>
+    <p class="reveal delay-1">Personalised holiday planning, guided tours, and luxury travel packages crafted just for you.</p>
+    <div class="hero-buttons reveal delay-2">
+      <a href="services.html" class="btn btn-primary">Explore Packages</a>
+      <a href="calculator.html" class="btn btn-outline">Estimate Cost</a>
+    </div>
+  </div>
+
+  <div class="slide-dots" role="tablist" aria-label="Slide navigation">
+    <button class="dot active" role="tab" aria-label="Slide 1" aria-selected="true"></button>
+    <button class="dot" role="tab" aria-label="Slide 2" aria-selected="false"></button>
+    <button class="dot" role="tab" aria-label="Slide 3" aria-selected="false"></button>
+  </div>
+</section>
+
+<!-- POPULAR PACKAGES -->
+<section class="packages" aria-labelledby="packages-heading">
+  <div class="section-inner">
+    <header class="section-header">
+      <span class="section-tag">🌍 Popular Getaways</span>
+      <h2 id="packages-heading">Featured Travel Packages</h2>
+      <p>Handpicked destinations loved by our travellers – from tropical beaches to iconic cities.</p>
+      <div class="divider"></div>
+    </header>
+
+    <div class="packages-grid">
+      <article class="package-card reveal">
+        <div class="package-img" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600');" role="img" aria-label="Bali, Indonesia">
+          <span class="package-badge">Bestseller</span>
+        </div>
+        <div class="package-body">
+          <h3>Bali Bliss Escape</h3>
+          <p>Lush rice terraces, ancient temples, and pristine beaches await in the Island of the Gods.</p>
+          <div class="package-meta">
+            <span class="price">From $1,250</span>
+            <span class="duration">🗓 7 nights</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="package-card reveal delay-1">
+        <div class="package-img" style="background-image:url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600');" role="img" aria-label="Paris, France">
+          <span class="package-badge">Romantic</span>
+        </div>
+        <div class="package-body">
+          <h3>Paris Romance</h3>
+          <p>The City of Light awaits with art, cuisine, and the timeless Eiffel Tower at your doorstep.</p>
+          <div class="package-meta">
+            <span class="price">From $2,800</span>
+            <span class="duration">🗓 10 nights</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="package-card reveal delay-2">
+        <div class="package-img" style="background-image:url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600');" role="img" aria-label="Tokyo, Japan">
+          <span class="package-badge">Cultural</span>
+        </div>
+        <div class="package-body">
+          <h3>Tokyo Explorer</h3>
+          <p>Ancient shrines, ultra-modern cityscapes, and unparalleled cuisine in Japan's vibrant capital.</p>
+          <div class="package-meta">
+            <span class="price">From $2,100</span>
+            <span class="duration">🗓 9 nights</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="package-card reveal delay-3">
+        <div class="package-img" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600');" role="img" aria-label="Dubai, UAE">
+          <span class="package-badge">Luxury</span>
+        </div>
+        <div class="package-body">
+          <h3>Dubai Luxury Stay</h3>
+          <p>World-record skyscrapers, golden deserts, and opulent shopping in the UAE's glittering jewel.</p>
+          <div class="package-meta">
+            <span class="price">From $2,450</span>
+            <span class="duration">🗓 8 nights</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-card reveal">
+        <span class="number" data-count="15000" data-suffix="+">0</span>
+        Happy Travellers
+      </div>
+      <div class="stat-card reveal delay-1">
+        <span class="number" data-count="80" data-suffix="+">0</span>
+        Destinations
+      </div>
+      <div class="stat-card reveal delay-2">
+        <span class="number" data-count="12" data-suffix=" yrs">0</span>
+        Experience
+      </div>
+      <div class="stat-card reveal delay-3">
+        <span class="number" data-count="98" data-suffix="%">0</span>
+        Satisfaction Rate
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section style="background: linear-gradient(135deg, #e8a020, #cf8a10); padding: 4rem 1.5rem; text-align:center; color:#fff;">
+  <div class="section-inner">
+    <h2 class="reveal" style="font-size:clamp(1.6rem,3vw,2.3rem); margin-bottom:0.8rem;">Ready to Plan Your Next Adventure?</h2>
+    <p class="reveal delay-1" style="margin-bottom:1.8rem; opacity:0.92;">Use our free trip cost estimator or book a personalised consultation today.</p>
+    <div class="reveal delay-2" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="calculator.html" class="btn btn-dark">Try Trip Calculator</a>
+      <a href="appointment.html" class="btn" style="background:#fff; color:#e8a020; font-weight:700;">Book Appointment</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section aria-labelledby="testimonials-heading">
+  <div class="section-inner">
+    <header class="section-header">
+      <span class="section-tag">⭐ Testimonials</span>
+      <h2 id="testimonials-heading">What Our Travellers Say</h2>
+      <div class="divider"></div>
+    </header>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:2rem;">
+      <blockquote class="service-card reveal" style="font-style:italic; padding:2rem;">
+        <p style="margin-bottom:1rem;">"WanderLux made our honeymoon in Bali absolutely magical. Every detail was perfectly arranged – I couldn't have asked for more!"</p>
+        <footer style="font-weight:700; color:var(--primary); font-style:normal;">— Sarah & James, Melbourne ⭐⭐⭐⭐⭐</footer>
+      </blockquote>
+      <blockquote class="service-card reveal delay-1" style="font-style:italic; padding:2rem;">
+        <p style="margin-bottom:1rem;">"The Tokyo package was incredible value. Our consultant knew exactly what we wanted and delivered beyond our expectations."</p>
+        <footer style="font-weight:700; color:var(--primary); font-style:normal;">— Michael T., Sydney ⭐⭐⭐⭐⭐</footer>
+      </blockquote>
+      <blockquote class="service-card reveal delay-2" style="font-style:italic; padding:2rem;">
+        <p style="margin-bottom:1rem;">"Booked a group tour to Paris through WanderLux – seamless experience from booking to return. Highly recommend!"</p>
+        <footer style="font-weight:700; color:var(--primary); font-style:normal;">— Priya R., Brisbane ⭐⭐⭐⭐⭐</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo"><span class="logo-icon">✈</span> Wander<span>Lux</span></div>
+      <p>Crafting unforgettable travel experiences since 2012. Your journey, your way – with WanderLux.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Facebook">f</a>
+        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+        <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+    <nav class="footer-col" aria-label="Quick links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="calculator.html">Trip Calculator</a></li>
+        <li><a href="appointment.html">Book Appointment</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Services">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Holiday Packages</a></li>
+        <li><a href="services.html">Guided Tours</a></li>
+        <li><a href="services.html">Flights & Hotels</a></li>
+        <li><a href="services.html">Honeymoon Specials</a></li>
+        <li><a href="services.html">Group Travel</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>📍 Level 8, 123 Collins St, Melbourne VIC 3000</li>
+        <li>📞 +61 3 9000 1234</li>
+        <li>✉ hello@wanderlux.com.au</li>
+        <li>🕐 Mon–Fri: 9am–6pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 WanderLux Travel Agency. All rights reserved. | ABN 00 000 000 000</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

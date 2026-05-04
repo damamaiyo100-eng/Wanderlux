@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book a free travel consultation with WanderLux Travel Agency. Our expert consultants will help plan your perfect holiday." />
+  <meta name="keywords" content="book appointment, travel consultation, holiday planning, travel agent" />
+  <title>Book an Appointment – WanderLux Travel Agency</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="WanderLux Home"><span class="logo-icon">✈</span>Wander<span>Lux</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="calculator.html" aria-label="Trip cost calculator">Calculator</a></li>
+      <li><a href="appointment.html" aria-label="Book an appointment">Book</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="appointment-hero" role="banner">
+  <div>
+    <h1>📅 Book an Appointment</h1>
+    <p>Our travel experts are ready to design your dream holiday. Book a free, no-obligation consultation today.</p>
+  </div>
+</div>
+
+<!-- APPOINTMENT FORM -->
+<section aria-labelledby="appoint-heading">
+  <div class="section-inner">
+    <div class="appointment-card reveal">
+      <h2 id="appoint-heading" style="color:var(--primary); margin-bottom:0.4rem; font-size:1.5rem;">Request an Appointment</h2>
+      <p style="color:var(--text-gray); margin-bottom:2rem;">Complete the form below and one of our consultants will confirm your appointment within 24 hours.</p>
+
+      <form id="appointment-form" novalidate aria-label="Appointment request form">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ap-name">Full Name *</label>
+            <input
+              type="text"
+              id="ap-name"
+              name="fullname"
+              placeholder="e.g. Jane Smith"
+              required
+              aria-required="true"
+              aria-describedby="err-ap-name"
+              autocomplete="name"
+            />
+            <span class="form-error" id="err-ap-name" role="alert">Please enter your full name.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="ap-email">Email Address *</label>
+            <input
+              type="email"
+              id="ap-email"
+              name="email"
+              placeholder="e.g. jane@email.com"
+              required
+              aria-required="true"
+              aria-describedby="err-ap-email"
+              autocomplete="email"
+            />
+            <span class="form-error" id="err-ap-email" role="alert">Please enter a valid email address.</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ap-phone">Phone Number *</label>
+            <input
+              type="tel"
+              id="ap-phone"
+              name="phone"
+              placeholder="e.g. 04XX XXX XXX"
+              required
+              aria-required="true"
+              aria-describedby="err-ap-phone"
+              autocomplete="tel"
+            />
+            <span class="form-error" id="err-ap-phone" role="alert">Please enter your phone number.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="ap-date">Preferred Appointment Date *</label>
+            <input
+              type="date"
+              id="ap-date"
+              name="preferred_date"
+              required
+              aria-required="true"
+              aria-describedby="err-ap-date"
+            />
+            <span class="form-error" id="err-ap-date" role="alert">Please select a preferred date.</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ap-service">Service of Interest</label>
+            <select id="ap-service" name="service">
+              <option value="">— Select a service —</option>
+              <option value="holiday">Holiday Packages</option>
+              <option value="tours">Guided Tours</option>
+              <option value="flights">Flights & Hotels</option>
+              <option value="honeymoon">Honeymoon Specials</option>
+              <option value="group">Group Travel</option>
+              <option value="insurance">Travel Insurance</option>
+              <option value="other">Other / Not Sure Yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="ap-budget">Approximate Budget (AUD)</label>
+            <select id="ap-budget" name="budget">
+              <option value="">— Select a range —</option>
+              <option value="under2k">Under $2,000</option>
+              <option value="2k-5k">$2,000 – $5,000</option>
+              <option value="5k-10k">$5,000 – $10,000</option>
+              <option value="10k-20k">$10,000 – $20,000</option>
+              <option value="20kplus">$20,000+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="ap-message">Tell Us About Your Dream Trip *</label>
+          <textarea
+            id="ap-message"
+            name="message"
+            placeholder="Where would you like to go? How many travellers? Any special occasions or requirements?"
+            required
+            aria-required="true"
+            aria-describedby="err-ap-message"
+            rows="5"
+          ></textarea>
+          <span class="form-error" id="err-ap-message" role="alert">Please tell us about your trip.</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; font-size:1.05rem; padding:1rem;">
+          📅 Request Appointment
+        </button>
+
+        <div class="form-success" id="appointment-success" role="alert">
+          ✅ Thank you! Your appointment request has been received. We'll confirm within 24 hours.
+        </div>
+
+      </form>
+    </div>
+
+    <!-- WHY BOOK -->
+    <div style="margin-top:4rem;">
+      <h3 class="reveal" style="color:var(--primary); text-align:center; margin-bottom:2rem; font-size:1.4rem;">Why Book a Consultation?</h3>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="icon" aria-hidden="true">🆓</div>
+          <h3>100% Free</h3>
+          <p>No cost, no obligation. Our consultations are completely complimentary.</p>
+        </div>
+        <div class="value-card reveal delay-1">
+          <div class="icon" aria-hidden="true">🎯</div>
+          <h3>Personalised Advice</h3>
+          <p>Get tailored recommendations that match your budget, interests and timeline.</p>
+        </div>
+        <div class="value-card reveal delay-2">
+          <div class="icon" aria-hidden="true">⏱</div>
+          <h3>Save Time</h3>
+          <p>Skip hours of research – our experts know exactly what works where.</p>
+        </div>
+        <div class="value-card reveal delay-3">
+          <div class="icon" aria-hidden="true">🔒</div>
+          <h3>Best Price Guarantee</h3>
+          <p>We'll match or beat any comparable quote you find elsewhere.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo"><span class="logo-icon">✈</span> Wander<span>Lux</span></div>
+      <p>Crafting unforgettable travel experiences since 2012.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Facebook">f</a>
+        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+        <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+    <nav class="footer-col" aria-label="Quick links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="calculator.html">Trip Calculator</a></li>
+        <li><a href="appointment.html">Book Appointment</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Services">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Holiday Packages</a></li>
+        <li><a href="services.html">Guided Tours</a></li>
+        <li><a href="services.html">Flights & Hotels</a></li>
+        <li><a href="services.html">Honeymoon Specials</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>📍 Level 8, 123 Collins St, Melbourne VIC 3000</li>
+        <li>📞 +61 3 9000 1234</li>
+        <li>✉ hello@wanderlux.com.au</li>
+        <li>🕐 Mon–Fri: 9am–6pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 WanderLux Travel Agency. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Estimate your travel costs with WanderLux's free Trip Cost Calculator – enter your destination, travellers, duration and travel style for an instant quote." />
+  <meta name="keywords" content="trip cost calculator, travel estimate, holiday budget, travel cost" />
+  <title>Trip Cost Calculator – WanderLux Travel Agency</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="WanderLux Home"><span class="logo-icon">✈</span>Wander<span>Lux</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="calculator.html" aria-label="Trip cost calculator">Calculator</a></li>
+      <li><a href="appointment.html" aria-label="Book an appointment">Book</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero" role="banner">
+  <div>
+    <h1>🧮 Trip Cost Calculator</h1>
+    <p>Get an instant estimate for your dream holiday in seconds</p>
+  </div>
+</div>
+
+<!-- CALCULATOR -->
+<section class="calculator-section" aria-labelledby="calc-heading">
+  <div class="section-inner">
+    <header class="section-header">
+      <span class="section-tag">💰 Free Estimator</span>
+      <h2 id="calc-heading">How Much Will Your Trip Cost?</h2>
+      <p>Fill in your travel preferences below and get an instant ballpark estimate – no commitment required.</p>
+      <div class="divider"></div>
+    </header>
+
+    <div class="calc-wrapper">
+      <!-- FORM -->
+      <div class="calc-form-card reveal-left">
+        <h3 style="color:var(--primary); margin-bottom:1.5rem; font-size:1.2rem;">Your Travel Preferences</h3>
+
+        <form id="calc-form" novalidate aria-label="Trip cost calculator form">
+
+          <div class="form-group">
+            <label for="c-dest">Destination *</label>
+            <select id="c-dest" name="destination" aria-required="true" aria-describedby="err-dest">
+              <option value="">— Select a destination —</option>
+              <option value="bali">🇮🇩 Bali, Indonesia</option>
+              <option value="paris">🇫🇷 Paris, France</option>
+              <option value="tokyo">🇯🇵 Tokyo, Japan</option>
+              <option value="dubai">🇦🇪 Dubai, UAE</option>
+              <option value="maldives">🇲🇻 Maldives</option>
+              <option value="sydney">🇦🇺 Sydney, Australia</option>
+              <option value="london">🇬🇧 London, UK</option>
+              <option value="newyork">🇺🇸 New York, USA</option>
+            </select>
+            <span class="form-error" id="err-dest" role="alert">Please select a destination.</span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-travellers">Number of Travellers *</label>
+              <input
+                type="number"
+                id="c-travellers"
+                name="travellers"
+                min="1"
+                max="50"
+                placeholder="e.g. 2"
+                aria-required="true"
+                aria-describedby="err-travellers"
+              />
+              <span class="form-error" id="err-travellers" role="alert">Enter a valid number (min 1).</span>
+            </div>
+
+            <div class="form-group">
+              <label for="c-days">Number of Days *</label>
+              <input
+                type="number"
+                id="c-days"
+                name="days"
+                min="1"
+                max="365"
+                placeholder="e.g. 7"
+                aria-required="true"
+                aria-describedby="err-days"
+              />
+              <span class="form-error" id="err-days" role="alert">Enter a valid number of days (min 1).</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="c-style">Travel Style *</label>
+            <select id="c-style" name="style" aria-required="true">
+              <option value="budget">🎒 Budget – Hostels, local eats, public transport</option>
+              <option value="standard" selected>⭐ Standard – 3–4★ hotels, mix of dining</option>
+              <option value="luxury">💎 Luxury – 5★ resorts, fine dining, private transfers</option>
+            </select>
+          </div>
+
+          <div style="display:flex; gap:1rem; margin-top:0.5rem; flex-wrap:wrap;">
+            <button type="submit" class="btn btn-primary" style="flex:1; min-width:140px;">
+              Calculate Estimate
+            </button>
+            <button type="button" id="calc-reset" class="btn" style="flex:1; min-width:140px; background:var(--border); color:var(--text-dark);">
+              Reset
+            </button>
+          </div>
+        </form>
+
+        <!-- HOW IT WORKS -->
+        <div style="margin-top:2rem; padding:1.2rem; background:var(--light-bg); border-radius:8px;">
+          <h4 style="color:var(--primary); margin-bottom:0.6rem; font-size:0.95rem;">ℹ️ How the estimate is calculated</h4>
+          <p style="font-size:0.85rem; color:var(--text-gray);">
+            We use preset daily rates per traveller (activities + meals) + nightly accommodation costs,
+            all multiplied by your chosen travel style. Estimates are in AUD and serve as a planning guide.
+            Final costs may vary – book an appointment for a precise quote.
+          </p>
+        </div>
+      </div>
+
+      <!-- RESULT PANEL -->
+      <div class="calc-result-card reveal-right">
+        <h3>Your Estimated Cost</h3>
+
+        <div id="result-placeholder" class="result-placeholder">
+          <div class="big-icon" aria-hidden="true">✈️</div>
+          <p>Fill in your preferences and click <strong>Calculate Estimate</strong> to see your trip cost here.</p>
+        </div>
+
+        <div id="calc-output" aria-live="polite" aria-atomic="true">
+          <div class="result-line">
+            <span>Destination</span>
+            <strong id="r-dest">–</strong>
+          </div>
+          <div class="result-line">
+            <span>Travellers</span>
+            <strong id="r-travellers">–</strong>
+          </div>
+          <div class="result-line">
+            <span>Duration</span>
+            <strong id="r-days">–</strong>
+          </div>
+          <div class="result-line">
+            <span>Package Type</span>
+            <strong id="r-style">–</strong>
+          </div>
+
+          <div class="result-total">
+            <span class="total-amount" id="r-total">$0</span>
+            <p id="r-perperson" style="font-weight:600;"></p>
+          </div>
+
+          <p id="r-summary" style="margin-top:1.2rem; font-size:0.88rem; opacity:0.8; line-height:1.6;"></p>
+
+          <a href="appointment.html" class="btn" style="display:block; margin-top:1.5rem; background:var(--accent); color:#fff; text-align:center; font-weight:700;">
+            Book This Trip
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RATE REFERENCE TABLE -->
+    <div class="reveal" style="margin-top:4rem;">
+      <h3 style="color:var(--primary); margin-bottom:1.5rem; text-align:center;">Base Daily Rate Reference (AUD)</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; font-size:0.9rem; background:var(--white); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow);">
+          <thead>
+            <tr style="background:var(--primary); color:#fff;">
+              <th style="padding:0.9rem 1.2rem; text-align:left;">Destination</th>
+              <th style="padding:0.9rem 1.2rem; text-align:center;">Daily Rate / Traveller</th>
+              <th style="padding:0.9rem 1.2rem; text-align:center;">Accommodation / Night</th>
+              <th style="padding:0.9rem 1.2rem; text-align:center;">Budget ×0.7</th>
+              <th style="padding:0.9rem 1.2rem; text-align:center;">Standard ×1.0</th>
+              <th style="padding:0.9rem 1.2rem; text-align:center;">Luxury ×1.8</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:0.8rem 1.2rem;">🇮🇩 Bali</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">$120</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">$80</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×0.7</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×1.0</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×1.8</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border); background:var(--light-bg);">
+              <td style="padding:0.8rem 1.2rem;">🇫🇷 Paris</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">$220</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">$180</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×0.7</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×1.0</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×1.8</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:0.8rem 1.2rem;">🇯🇵 Tokyo</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">$180</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">$140</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×0.7</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×1.0</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×1.8</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border); background:var(--light-bg);">
+              <td style="padding:0.8rem 1.2rem;">🇦🇪 Dubai</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">$200</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">$170</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×0.7</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×1.0</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×1.8</td>
+            </tr>
+            <tr>
+              <td style="padding:0.8rem 1.2rem;">🇲🇻 Maldives</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">$350</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">$400</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×0.7</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×1.0</td>
+              <td style="padding:0.8rem 1.2rem; text-align:center;">×1.8</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align:center; color:var(--text-gray); font-size:0.82rem; margin-top:0.8rem;">
+        * All rates are in AUD and are indicative estimates only. Actual costs vary based on availability, season, and specific requirements.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo"><span class="logo-icon">✈</span> Wander<span>Lux</span></div>
+      <p>Crafting unforgettable travel experiences since 2012.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Facebook">f</a>
+        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+        <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+    <nav class="footer-col" aria-label="Quick links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="calculator.html">Trip Calculator</a></li>
+        <li><a href="appointment.html">Book Appointment</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Services">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Holiday Packages</a></li>
+        <li><a href="services.html">Guided Tours</a></li>
+        <li><a href="services.html">Flights & Hotels</a></li>
+        <li><a href="services.html">Honeymoon Specials</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>📍 Level 8, 123 Collins St, Melbourne VIC 3000</li>
+        <li>📞 +61 3 9000 1234</li>
+        <li>✉ hello@wanderlux.com.au</li>
+        <li>🕐 Mon–Fri: 9am–6pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 WanderLux Travel Agency. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

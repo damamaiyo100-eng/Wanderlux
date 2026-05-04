@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact WanderLux Travel Agency – find our address, phone number, email and send us a message directly from the website." />
+  <meta name="keywords" content="contact WanderLux, travel agency contact, email travel agent, Melbourne travel agency" />
+  <title>Contact Us – WanderLux Travel Agency</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="WanderLux Home"><span class="logo-icon">✈</span>Wander<span>Lux</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="calculator.html" aria-label="Trip cost calculator">Calculator</a></li>
+      <li><a href="appointment.html" aria-label="Book an appointment">Book</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="contact-hero" role="banner">
+  <div>
+    <h1>Get in Touch</h1>
+    <p>Questions about a destination? Ready to start planning? We'd love to hear from you.</p>
+  </div>
+</div>
+
+<!-- CONTACT MAIN -->
+<section aria-labelledby="contact-heading">
+  <div class="section-inner">
+    <div class="contact-wrapper">
+
+      <!-- INFO PANEL -->
+      <aside class="contact-info-card reveal-left">
+        <h3>Contact Information</h3>
+
+        <div class="info-item">
+          <span class="info-icon" aria-hidden="true">📍</span>
+          <div>
+            <h4>Office Address</h4>
+            <p>Level 8, 123 Collins Street<br>Melbourne VIC 3000, Australia</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon" aria-hidden="true">📞</span>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:+61390001234" style="color:#fff;">+61 3 9000 1234</a></p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon" aria-hidden="true">✉️</span>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:hello@wanderlux.com.au" style="color:#fff;">hello@wanderlux.com.au</a></p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon" aria-hidden="true">🕐</span>
+          <div>
+            <h4>Business Hours</h4>
+            <p>Monday – Friday: 9:00am – 6:00pm<br>Saturday: 10:00am – 3:00pm<br>Sunday: Closed</p>
+          </div>
+        </div>
+
+        <div class="social-links" style="margin-top:1.5rem;">
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+        </div>
+
+        <!-- EMBEDDED MAP -->
+        <div class="map-container" style="margin-top:1.5rem;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.84!2d144.9631!3d-37.8136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sCollins%20St%2C%20Melbourne%20VIC%203000!5e0!3m2!1sen!2sau!4v1610000000000"
+            title="WanderLux office location on Google Maps"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </aside>
+
+      <!-- CONTACT FORM -->
+      <div class="contact-form-card reveal-right">
+        <h3>Send Us a Message</h3>
+        <p style="color:var(--text-gray); margin-bottom:1.5rem;">We'll respond to all enquiries within one business day.</p>
+
+        <form id="contact-form" novalidate aria-label="Contact form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Full Name *</label>
+              <input
+                type="text"
+                id="cf-name"
+                name="name"
+                placeholder="Your full name"
+                required
+                aria-required="true"
+                aria-describedby="err-cf-name"
+                autocomplete="name"
+              />
+              <span class="form-error" id="err-cf-name" role="alert">Please enter your name.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="cf-email">Email Address *</label>
+              <input
+                type="email"
+                id="cf-email"
+                name="email"
+                placeholder="your@email.com"
+                required
+                aria-required="true"
+                aria-describedby="err-cf-email"
+                autocomplete="email"
+              />
+              <span class="form-error" id="err-cf-email" role="alert">Please enter a valid email.</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cf-subject">Subject *</label>
+            <input
+              type="text"
+              id="cf-subject"
+              name="subject"
+              placeholder="e.g. Enquiry about Bali package"
+              required
+              aria-required="true"
+              aria-describedby="err-cf-subject"
+            />
+            <span class="form-error" id="err-cf-subject" role="alert">Please enter a subject.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="cf-message">Message *</label>
+            <textarea
+              id="cf-message"
+              name="message"
+              placeholder="Tell us how we can help…"
+              required
+              aria-required="true"
+              aria-describedby="err-cf-message"
+              rows="6"
+            ></textarea>
+            <span class="form-error" id="err-cf-message" role="alert">Please enter your message.</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; font-size:1rem; padding:0.9rem;">
+            ✉️ Send Message
+          </button>
+
+          <div class="form-success" id="contact-success" role="alert">
+            ✅ Message sent! We'll get back to you within one business day.
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ STRIP -->
+<section style="background:var(--light-bg);" aria-labelledby="faq-heading">
+  <div class="section-inner">
+    <header class="section-header">
+      <span class="section-tag">❓ FAQ</span>
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="divider"></div>
+    </header>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; max-width:900px; margin:0 auto;">
+      <div class="service-card reveal">
+        <h3 style="font-size:1rem;">How do I get a quote?</h3>
+        <p style="margin-top:0.5rem;">Use our Trip Calculator for an instant estimate, or book a free consultation for a personalised quote.</p>
+      </div>
+      <div class="service-card reveal delay-1">
+        <h3 style="font-size:1rem;">Do I pay to consult with you?</h3>
+        <p style="margin-top:0.5rem;">No – all consultations with WanderLux are completely free, with no obligation to book.</p>
+      </div>
+      <div class="service-card reveal delay-2">
+        <h3 style="font-size:1rem;">Can you help with travel insurance?</h3>
+        <p style="margin-top:0.5rem;">Yes! We offer comprehensive travel insurance options alongside all our packages.</p>
+      </div>
+      <div class="service-card reveal delay-3">
+        <h3 style="font-size:1rem;">What if I need to cancel?</h3>
+        <p style="margin-top:0.5rem;">We offer flexible cancellation policies. Specific terms depend on the package – ask your consultant.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo"><span class="logo-icon">✈</span> Wander<span>Lux</span></div>
+      <p>Crafting unforgettable travel experiences since 2012.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Facebook">f</a>
+        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+        <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+    <nav class="footer-col" aria-label="Quick links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="calculator.html">Trip Calculator</a></li>
+        <li><a href="appointment.html">Book Appointment</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-col" aria-label="Services">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html">Holiday Packages</a></li>
+        <li><a href="services.html">Guided Tours</a></li>
+        <li><a href="services.html">Flights & Hotels</a></li>
+        <li><a href="services.html">Honeymoon Specials</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>📍 Level 8, 123 Collins St, Melbourne VIC 3000</li>
+        <li>📞 +61 3 9000 1234</li>
+        <li>✉ hello@wanderlux.com.au</li>
+        <li>🕐 Mon–Fri: 9am–6pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 WanderLux Travel Agency. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // Initialise EmailJS – replace 'YOUR_PUBLIC_KEY' with your actual public key from emailjs.com
+  (function(){
+    emailjs.init({ publicKey: 'YOUR_PUBLIC_KEY' });
+  })();
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
